@@ -1,0 +1,103 @@
+{
+    "content": {},
+    "raw": "<!doctype html><html><head><title>test</title></head><body><p>test</p></body></html>",
+    "doctype": {
+        "raw": "<!doctype html>",
+        "name": "html",
+        "extra": null
+    },
+    "html": {
+        "tagName": "html",
+        "rawTagName": "html",
+        "attributes": {},
+        "startIndex": 15,
+        "children": [
+            {
+                "tagName": "head",
+                "rawTagName": "head",
+                "attributes": {},
+                "startIndex": 21,
+                "children": [
+                    {
+                        "tagName": "title",
+                        "rawTagName": "title",
+                        "attributes": {},
+                        "startIndex": 27,
+                        "children": [
+                            "test"
+                        ],
+                        "endIndex": 46,
+                        "raw": "<title>test</title>"
+                    }
+                ],
+                "endIndex": 53,
+                "raw": "<head><title>test</title></head>"
+            },
+            {
+                "tagName": "body",
+                "rawTagName": "body",
+                "attributes": {},
+                "startIndex": 53,
+                "children": [
+                    {
+                        "tagName": "p",
+                        "rawTagName": "p",
+                        "attributes": {},
+                        "startIndex": 59,
+                        "children": [
+                            "test"
+                        ],
+                        "endIndex": 70,
+                        "raw": "<p>test</p>"
+                    }
+                ],
+                "endIndex": 77,
+                "raw": "<body><p>test</p></body>"
+            }
+        ],
+        "endIndex": 84,
+        "raw": "<html><head><title>test</title></head><body><p>test</p></body></html>"
+    },
+    "body": {
+        "tagName": "body",
+        "rawTagName": "body",
+        "attributes": {},
+        "startIndex": 53,
+        "children": [
+            {
+                "tagName": "p",
+                "rawTagName": "p",
+                "attributes": {},
+                "startIndex": 59,
+                "children": [
+                    "test"
+                ],
+                "endIndex": 70,
+                "raw": "<p>test</p>"
+            }
+        ],
+        "endIndex": 77,
+        "raw": "<body><p>test</p></body>"
+    },
+    "head": {
+        "tagName": "head",
+        "rawTagName": "head",
+        "attributes": {},
+        "startIndex": 21,
+        "children": [
+            {
+                "tagName": "title",
+                "rawTagName": "title",
+                "attributes": {},
+                "startIndex": 27,
+                "children": [
+                    "test"
+                ],
+                "endIndex": 46,
+                "raw": "<title>test</title>"
+            }
+        ],
+        "endIndex": 53,
+        "raw": "<head><title>test</title></head>"
+    }
+}
