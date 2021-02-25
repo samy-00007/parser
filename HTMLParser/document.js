@@ -38,10 +38,6 @@ class Document {
         pushChildren(this.documentElement)
     }
     
-    getElementById(id) {
-        return this.allElems.find(x => x.attributes.id === id)
-    }
-    
     getElementsByTagName(name) {
         return this.allElems.filter(x => x.tagName === name)
     }
@@ -49,6 +45,31 @@ class Document {
     getElementsByClassName(name) {
         name = name.split(' ')
         return this.allElems.filter(x => x.classes && name.every(y => x.classes.includes(y)))
+    }
+    
+    getElementById(id) {
+        let res = {}
+        function findRecursive(obj, val) {
+            if(res.value) return
+            if(obj.attributes.id === id) {
+                val.value = obj
+                return
+            }
+            if(obj.children) obj.children.filter(x => typeof x === 'object').forEach(x => findRecursive(x, val))
+        }
+        findRecursive(this.documentElement, res)
+        return res.value /*? new Document({content: res.value }) :*/|| null
+    }
+    
+    innerText(element) {
+        function recursive(obj) {
+            if(!obj.children) return;
+            let t = []
+            t.push(...obj.children.map(x => typeof x === 'string' ? x : recursive(x)))
+            return t
+        }
+        let res = recursive(element).flat(Infinity)
+        return res.join('')
     }
 }
 
